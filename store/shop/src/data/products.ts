@@ -39,7 +39,11 @@ export const products: Product[] = [
       "دفا وخفة وحرية. بطانية بيبي طبقة واحدة ناعمة جدًا على بشرة طفلك وبتديله الدفا اللي محتاجه. وزن خفيف ودفا عالي وتنفع في أي مكان. غسيل بمياه باردة على دورة هادية، وتنشيف على حرارة هادية، ومن غير سوفتنر.",
     price: 350, // تقديري
     category: "بطاطين",
-    images: ["/products/baby-blanket-fleece-1.jpg", "/products/baby-blanket-fleece-2.jpg"],
+    images: [
+      "/products/baby-blanket-fleece-1.jpg",
+      "/products/baby-blanket-fleece-2.jpg",
+      "/products/baby-blanket-fleece-3.jpg", // اللون التاني (كاروهات)
+    ],
     colors: [{ name: "الأساسي", hex: "#f3efe8" }],
     variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
@@ -62,6 +66,28 @@ export const products: Product[] = [
     price: 250, // تقديري
     category: "مستلزمات الرضاعة",
     images: ["/products/nursing-cover-1.jpg", "/products/nursing-cover-2.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
+  },
+  {
+    slug: "diaper-changing-mat",
+    name: "مفرش تغيير حفاضات",
+    description:
+      "مفرش تغيير حفاضات بتصميم جديد. 3 طبقات مانعة للتسريب تحافظ على المكان نضيف، بألوان مميزة وجذابة.",
+    price: 250, // تقديري
+    category: "مستلزمات البيبي",
+    images: ["/products/diaper-changing-mat-1.jpg", "/products/diaper-changing-mat-2.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
+  },
+  {
+    slug: "baby-pillow",
+    name: "مخدة بيبي مانعة تسطح الرأس",
+    description:
+      "مخدة متصممة مخصوص عشان تحمي راس طفلك وتمنع تسطح الرأس بتوزيع الضغط بالتساوي وهو نايم. مقاس عملي 25×22 سم يناسب السرير والكاريكوت وعربية الأطفال، وخامة قطن ناعمة وآمنة على بشرة الرضيع الحساسة.",
+    price: 200, // تقديري
+    category: "مستلزمات البيبي",
+    images: ["/products/baby-pillow-1.jpg", "/products/baby-pillow-2.jpg"],
     colors: [{ name: "الأساسي", hex: "#f3efe8" }],
     variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
