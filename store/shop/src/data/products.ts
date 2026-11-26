@@ -30,68 +30,50 @@ function stockGrid(colors: string[], sizes: string[], stock: number): Variant[] 
   return colors.flatMap((color) => sizes.map((size) => ({ size, color, stock })));
 }
 
+// ملحوظة: الأسعار والمخزون والألوان هنا تقديرية ومؤقتة لحد ما يتحدد التسعير الفعلي. عدّلها قبل الإطلاق.
 export const products: Product[] = [
   {
-    slug: "basic-cotton-tshirt",
-    name: "تيشيرت قطن أساسي",
+    slug: "baby-blanket-fleece",
+    name: "بيبي بلانكت بولار",
     description:
-      "تيشيرت قطن 100% بقصة مريحة وخامة ناعمة بتستحمل الغسيل. مناسب للخروج واليوم العادي.",
-    price: 350,
-    compareAtPrice: 450,
-    category: "تيشيرتات",
-    images: [],
-    colors: [
-      { name: "أبيض", hex: "#ffffff" },
-      { name: "أسود", hex: "#111111" },
-      { name: "بيج", hex: "#d8c8b0" },
-    ],
-    variants: stockGrid(["أبيض", "أسود", "بيج"], ["S", "M", "L", "XL"], 10),
+      "دفا وخفة وحرية. بطانية بيبي طبقة واحدة ناعمة جدًا على بشرة طفلك وبتديله الدفا اللي محتاجه. وزن خفيف ودفا عالي وتنفع في أي مكان. غسيل بمياه باردة على دورة هادية، وتنشيف على حرارة هادية، ومن غير سوفتنر.",
+    price: 350, // تقديري
+    category: "بطاطين",
+    images: ["/products/baby-blanket-fleece-1.jpg", "/products/baby-blanket-fleece-2.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
   {
-    slug: "oversize-hoodie",
-    name: "هودي أوفر سايز",
+    slug: "baby-blanket-double",
+    name: "بيبي بلانكت طبقتين",
     description:
-      "هودي شتوي بقصة أوفر سايز وداخل مبطّن بخامة دافية. جيب أمامي وكاب بحبل.",
-    price: 650,
-    category: "هوديز",
-    images: [],
-    colors: [
-      { name: "رمادي", hex: "#9ca3af" },
-      { name: "أسود", hex: "#111111" },
-    ],
-    // مثال لمخزون مختلف لكل مقاس ولون:
-    variants: [
-      { size: "M", color: "رمادي", stock: 5 },
-      { size: "L", color: "رمادي", stock: 2 },
-      { size: "XL", color: "رمادي", stock: 0 },
-      { size: "M", color: "أسود", stock: 8 },
-      { size: "L", color: "أسود", stock: 6 },
-      { size: "XL", color: "أسود", stock: 3 },
-    ],
+      "نعومة القطن من بره، ودفا الفرو من جوه. الحضن الدافئ اللي البيبي محتاجه في أول شهوره. مزيج مثالي من القطن الناعم والفرو الدافئ. غسيل بمياه باردة على دورة هادية، وتنشيف على حرارة هادية، ومن غير سوفتنر.",
+    price: 550, // تقديري
+    category: "بطاطين",
+    images: ["/products/baby-blanket-double-1.jpg", "/products/baby-blanket-double-2.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
   {
-    slug: "straight-jeans",
-    name: "بنطلون جينز مستقيم",
-    description: "جينز بقصة مستقيمة وخامة سميكة شوية بتفضل محافظة على شكلها.",
-    price: 750,
-    category: "بناطيل",
-    images: [],
-    colors: [
-      { name: "أزرق", hex: "#3b5b8a" },
-      { name: "أسود", hex: "#111111" },
-    ],
-    variants: stockGrid(["أزرق", "أسود"], ["30", "32", "34", "36"], 6),
+    slug: "nursing-cover",
+    name: "ساتر رضاعة",
+    description:
+      "ألوان هادية ما تزعجش البيبي. شبكة علشان يفضل مطمن وهو شايفك. حزام علشان تظبطي المقاس وتضمني الخصوصية.",
+    price: 250, // تقديري
+    category: "مستلزمات الرضاعة",
+    images: ["/products/nursing-cover-1.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
   {
-    slug: "light-jacket",
-    name: "جاكيت خفيف",
-    description: "جاكيت خفيف لنص الموسم، بسوستة وجيبين جانبيين، مقاوم للهواء.",
-    price: 900,
-    compareAtPrice: 1100,
-    category: "جاكيتات",
-    images: [],
-    colors: [{ name: "زيتي", hex: "#556b2f" }],
-    variants: stockGrid(["زيتي"], ["M", "L", "XL"], 4),
+    slug: "baby-slippers-booties",
+    name: "جزم وشرابات بيبي",
+    description: "جزم وشرابات بيبي ناعمة ودافية لرجلين صغيرة. خامة مريحة وبطانة فرو من جوه.",
+    price: 200, // تقديري
+    category: "أحذية وشرابات",
+    images: ["/products/baby-slippers-booties-1.jpg", "/products/baby-slippers-booties-2.jpg"],
+    colors: [{ name: "الأساسي", hex: "#f3efe8" }],
+    variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
 ];
 
@@ -106,3 +88,4 @@ export function getVariant(product: Product, size: string, color: string): Varia
 export function totalStock(product: Product): number {
   return product.variants.reduce((sum, v) => sum + v.stock, 0);
 }
+
