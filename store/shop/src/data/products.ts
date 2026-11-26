@@ -61,7 +61,7 @@ export const products: Product[] = [
       "ألوان هادية ما تزعجش البيبي. شبكة علشان يفضل مطمن وهو شايفك. حزام علشان تظبطي المقاس وتضمني الخصوصية.",
     price: 250, // تقديري
     category: "مستلزمات الرضاعة",
-    images: ["/products/nursing-cover-1.jpg"],
+    images: ["/products/nursing-cover-1.jpg", "/products/nursing-cover-2.jpg"],
     colors: [{ name: "الأساسي", hex: "#f3efe8" }],
     variants: stockGrid(["الأساسي"], ["مقاس واحد"], 10), // مخزون تقديري
   },
